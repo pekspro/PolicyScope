@@ -8,6 +8,10 @@
     <Company>PEK's Productions</Company>
     <Version>0.0.1</Version>
     <Description>This library makes it easy to write unit test with Pekspro.PolicyScope.</Description>
+    <PackageProjectUrl>https://github.com/pekspro/PolicyScope</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pekspro/PolicyScope</RepositoryUrl>
+    <PackageTags>Polly</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
