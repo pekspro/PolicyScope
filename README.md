@@ -8,6 +8,8 @@ PolicyScope is not trying to use replace Polly. It also not supporting every
 feature in Polly. And it might not be the right choice in every situation. But
 if you are using Polly and using dependency injection it may be a good choice.
 
+![Build and Test](https://github.com/pekspro/PolicyScope/workflows/Build%20and%20Test/badge.svg)
+
 ## Why PolicyScope?
 
 Let us compare some code with and without PolicyScope.
