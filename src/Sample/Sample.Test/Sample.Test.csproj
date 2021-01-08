@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(Configuration)' != 'DebugLocalReferences' ">
-    <PackageReference Include="Pekspro.PolicyScope.Mock" Version="0.0.2" />
+    <PackageReference Include="Pekspro.PolicyScope.Mock" Version="0.0.3" />
   </ItemGroup>
 
 </Project>
