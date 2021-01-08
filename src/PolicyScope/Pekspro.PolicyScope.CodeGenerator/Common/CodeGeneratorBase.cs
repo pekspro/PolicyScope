@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Pekspro.PolicyScope.CodeGenerator.Common
@@ -10,22 +11,35 @@ namespace Pekspro.PolicyScope.CodeGenerator.Common
 
         }
 
-        public void WriteAllFiles(int maxServiceCount)
+        public int WriteAllFiles(int maxServiceCount)
         {
-            WriteClassFileContent(maxServiceCount);
-            WriteInterfaceFileContent(maxServiceCount);
+            int updateCount = 0;
+
+            if(WriteClassFileContent(maxServiceCount))
+            {
+                updateCount++;
+            }
+
+            if(WriteInterfaceFileContent(maxServiceCount))
+            {
+                updateCount++;
+            }
+
+            return updateCount;
         }
 
 
-        public virtual void WriteClassFileContent(int maxServiceCount)
+        public virtual bool WriteClassFileContent(int maxServiceCount)
         {
+            return false;
         }
 
-        public virtual void WriteInterfaceFileContent(int maxServiceCount)
+        public virtual bool WriteInterfaceFileContent(int maxServiceCount)
         {
+            return false;
         }
 
-        public void WriteFileContent(string filename, string fileContent)
+        public bool WriteFileContent(string filename, string fileContent)
         {
             string path = System.IO.Path.Combine("../../../../", filename);
 
@@ -37,7 +51,20 @@ namespace Pekspro.PolicyScope.CodeGenerator.Common
 
             fileContent = sb.ToString();
 
-            System.IO.File.WriteAllText(path, fileContent, Encoding.UTF8);
+            Console.Write($"Updating {path}... ");
+
+            string currentContent = System.IO.File.ReadAllText(path);
+            if(currentContent == fileContent)
+            {
+                Console.WriteLine("File already up to date.");
+                return false;
+            }
+            else
+            {
+                System.IO.File.WriteAllText(path, fileContent, Encoding.UTF8);
+                Console.WriteLine("File updated.");
+                return true;
+            }
         }
 
         public const bool GenerateSync = true;
