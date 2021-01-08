@@ -5,6 +5,7 @@ using Pekspro.PolicyScope.CodeGenerator.Mock;
 using Pekspro.PolicyScope.CodeGenerator.Test.LogicTest.Workers;
 using Pekspro.PolicyScope.CodeGenerator.Test.Mock;
 using System;
+using System.Linq;
 
 namespace Pekspro.PolicyScope.CodeGenerator
 {
@@ -13,6 +14,12 @@ namespace Pekspro.PolicyScope.CodeGenerator
         static int Main(string[] args)
         {
             int maxServiceCount = 4;
+
+            if(args.Length >= 1)
+            {
+                Common.CodeGeneratorBase.BaseDirectory = args.Last();
+                Console.WriteLine("Using base directory: " + Common.CodeGeneratorBase.BaseDirectory);
+            }
 
             int fileUpdateCount = 0;
             Console.WriteLine("Autogenerating code for main library...");
