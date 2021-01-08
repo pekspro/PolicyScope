@@ -28,12 +28,10 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(Configuration)' == 'DebugLocalReferences' ">
-    <ProjectReference Include="..\Pekspro.PolicyScope\Pekspro.PolicyScope.csproj" />
     <ProjectReference Include="..\Pekspro.PolicyScope.Mock\Pekspro.PolicyScope.Mock.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(Configuration)' != 'DebugLocalReferences' ">
-    <PackageReference Include="Pekspro.PolicyScope" Version="0.0.2" />
     <PackageReference Include="Pekspro.PolicyScope.Mock" Version="0.0.2" />
   </ItemGroup>
 
