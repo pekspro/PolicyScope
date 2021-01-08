@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <Authors>PEK</Authors>
     <Company>PEK's Productions</Company>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Description>This library makes it easier to use Polly with dependency injection. Also checkout Pekspro.PolicyScope.Mock for utilities for unit tests.</Description>
     <PackageProjectUrl>https://github.com/pekspro/PolicyScope</PackageProjectUrl>
     <RepositoryUrl>https://github.com/pekspro/PolicyScope</RepositoryUrl>
@@ -22,7 +22,7 @@
   <!-- Source link enable start -->
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <PropertyGroup>
