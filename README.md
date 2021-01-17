@@ -207,6 +207,17 @@ And then you just add PolicyScope:
             services.AddPolicyScope();
 ```
 
+In you main project you install
+[Pekspro.PolicyScope](https://www.nuget.org/packages/Pekspro.PolicyScope/) from
+NuGet like this:
+
+    dotnet add package Pekspro.PolicyScope
+
+In your unit test project you also install
+[Pekspro.PolicyScope.Mock](https://www.nuget.org/packages/Pekspro.PolicyScope.Mock/):
+
+    dotnet add package Pekspro.PolicyScope.Mock
+
 ## Sample
 
 With the code there is a complete sample project showing how to use PolicyScope. The is also sample on how to write unit tests.
